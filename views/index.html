@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
@@ -132,7 +133,10 @@
     <!-- BODY -->
     <div>
       <div class="hero-section">
-        <h3 class="container hero-head">Culinary Adventures Begin Here</h3>
+        <h3 class="container hero-head">
+          Spice up your cooking,
+          <span class="auto-type">effortlessly</span>
+        </h3>
         <p class="container hero-slogan">
           Explore, Savor the Flavor, Share the Love!
         </p>
@@ -257,5 +261,15 @@
 
     <script defer src="../assets/js/scroll.js"></script>
     <script src="../assets/js/index.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: ["effortlessly", "seamlessly", "gracefully"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true,
+      });
+    </script>
   </body>
 </html>
