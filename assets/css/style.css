@@ -283,3 +283,29 @@ article img {
   transform: translateY(-1.5rem);
   transition: 500ms;
 }
+
+/* Search Page */
+.search-box {
+  width: 100%;
+  padding-top: 60px;
+  /*   padding: 60px 0 0 20px; */
+  margin-bottom: 0;
+}
+
+.search-box input[type="search"] {
+  margin-top: 20px;
+  margin-bottom: 0;
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+}
+
+.search-box input[type="search"]:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--light);
+}
+
+.search-text {
+  color: var(--text);
+  font-size: 1.1rem;
+  background-color: var(--accent);
+}
