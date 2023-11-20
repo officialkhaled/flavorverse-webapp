@@ -238,6 +238,7 @@ article img {
 }
 
 /* SCROLL ANIMATION */
+/* MOVE LEFT-RIGHT */
 .hidden {
   opacity: 0;
   filter: blur(5px);
@@ -257,6 +258,20 @@ article img {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+/* MOVE DOWN-TOP */
+.move-up-hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-50%);
+  transition: all 1s;
+}
+
+.move-up {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 
 .motion {
