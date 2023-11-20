@@ -286,7 +286,7 @@ article img {
 
 /* Search Page */
 .search-box {
-  width: 100%;
+  width: 80%;
   padding-top: 60px;
   /*   padding: 60px 0 0 20px; */
   margin-bottom: 0;
@@ -295,17 +295,18 @@ article img {
 .search-box input[type="search"] {
   margin-top: 20px;
   margin-bottom: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 2px solid var(--accent);
   border-radius: 50px;
 }
 
-.search-box input[type="search"]:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.search-box input[type="search"]:hover,
+.search-box input[type="search"]:focus-visible {
   border: 2px solid var(--light);
 }
 
 .search-text {
   color: var(--text);
   font-size: 1.1rem;
-  background-color: var(--accent);
+  background-color: #fff;
 }
