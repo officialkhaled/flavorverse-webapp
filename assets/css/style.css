@@ -285,6 +285,10 @@ article img {
 }
 
 /* Search Page */
+.top-margin {
+  margin-top: 80px;
+}
+
 .search-box {
   width: 80%;
   padding-top: 60px;
@@ -293,7 +297,7 @@ article img {
 }
 
 .search-box input[type="search"] {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 2px solid var(--accent);
