@@ -79,21 +79,28 @@ body {
 }
 
 .button-value {
-  border: 2px solid var(--main);
+  border: 2px solid var(--yellow);
+  font-weight: 700;
   padding: 1em 2em;
   margin-right: 10px;
   border-radius: 50px;
+  background-color: #fff;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.button-value:hover {
   background-color: var(--light);
   color: #fff;
-  cursor: pointer;
+  transition: 0.3s;
 }
 
 .active {
   background-color: var(--main);
-  color: #ffffff;
+  color: #fff;
 }
 
-#products {
+#recipes {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 1em;
@@ -102,33 +109,44 @@ body {
 
 .card {
   background-color: #fff;
-  width: 18em;
+  max-width: 420px;
   margin-top: 1em;
   padding: 1em;
-  border-radius: 20px;
-  box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-container {
-  border-radius: 20px;
   text-align: center;
 }
 
 img {
   width: 100%;
-  border-radius: 20px;
-  object-fit: contain;
-  height: 15em;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .container {
   border-radius: 20px;
+  text-align: center;
   padding-top: 1em;
   color: #110f29;
 }
 
-.container h5 {
-  font-weight: 500;
+.container h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--main);
+}
+
+.container a:hover {
+  color: var(--light);
 }
 
 .hide {

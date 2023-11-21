@@ -27,19 +27,19 @@
         <button class="button-value" onclick="filterProduct('Starter')">
           Starter
         </button>
-        <button class="button-value" onclick="filterProduct('Main-course')">
-          Main Course
+        <button class="button-value" onclick="filterProduct('Maincourse')">
+          MainCourse
         </button>
         <button class="button-value" onclick="filterProduct('Dessert')">
           Dessert
         </button>
       </div>
-      <div id="products"></div>
+      <div id="recipes"></div>
     </div>
 
     <!-- Script -->
     <script>
-      let products = {
+      let recipes = {
         data: [
           {
             recipeName: "Glutinous Rice Cake",
@@ -67,19 +67,19 @@
           },
           {
             recipeName: "Meat and Rice Kabsa",
-            category: "Main-course",
+            category: "Maincourse",
             link: "maincourse.html",
             image: "../assets/img/recipes/kabsa.jpg",
           },
           {
             recipeName: "Chicken Biryani",
-            category: "Main-course",
+            category: "Maincourse",
             link: "maincourse.html",
             image: "../assets/img/recipes/chicken-biryani-.jpg",
           },
           {
             recipeName: "Egg Fried Rice",
-            category: "Main-course",
+            category: "Maincourse",
             link: "maincourse.html",
             image: "../assets/img/recipes/fried egg.jpg",
           },
@@ -104,27 +104,34 @@
         ],
       };
 
-      for (let i of products.data) {
+      for (let i of recipes.data) {
         //Create Card
         let card = document.createElement("div");
+
         //Card should have category and should stay hidden initially
+
         card.classList.add("card", i.category, "hide");
+
         //image div
         let imgContainer = document.createElement("div");
         imgContainer.classList.add("image-container");
+
         //img tag
         let image = document.createElement("img");
         image.setAttribute("src", i.image);
         imgContainer.appendChild(image);
         card.appendChild(imgContainer);
+
         //container
         let container = document.createElement("div");
         container.classList.add("container");
-        //product name
+
+        //recipe name
         let name = document.createElement("h2");
-        name.classList.add("product-name");
+        name.classList.add("recipe-name");
         name.innerText = i.recipeName.toUpperCase();
         container.appendChild(name);
+
         //link
         let link = document.createElement("a");
         link.setAttribute("href", i.link);
@@ -132,7 +139,7 @@
         container.appendChild(link);
 
         card.appendChild(container);
-        document.getElementById("products").appendChild(card);
+        document.getElementById("recipes").appendChild(card);
       }
 
       function filterProduct(value) {
@@ -148,6 +155,7 @@
         });
         //select all cards
         let elements = document.querySelectorAll(".card");
+
         //loop through all cards
         elements.forEach((element) => {
           //display all cards on 'all' button click
@@ -165,12 +173,14 @@
           }
         });
       }
+
       //Search button click
       document.getElementById("search").addEventListener("click", () => {
         //initializations
         let searchInput = document.getElementById("search-input").value;
-        let elements = document.querySelectorAll(".product-name");
+        let elements = document.querySelectorAll(".recipe-name");
         let cards = document.querySelectorAll(".card");
+
         //loop through all elements
         elements.forEach((element, index) => {
           //check if text includes the search value
@@ -183,7 +193,8 @@
           }
         });
       });
-      //Initially display all products
+
+      //Initially display all recipes
       window.onload = () => {
         filterProduct("all");
       };
